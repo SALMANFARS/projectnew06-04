@@ -1,0 +1,365 @@
+@import "colors.scss";
+* {
+    padding: 0;
+    margin: 0;
+}
+$container: calc(1200px * 100% / 1440px);
+@mixin xs {
+    @media (max-width: 768px) {
+        @content;
+        .inputs{
+              position: relative;
+              top: 94px;
+        }
+    }
+}
+@mixin sm {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+.wrapper {
+    background: url(images/Rectangle.png);
+    .container {
+       
+        width: $container;
+        margin: 0 auto;
+    }
+
+    .porag1{
+        /* Позвоните нам */
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+text-align: right;
+
+color: #686868;
+        }
+
+        .telefone{
+    position: absolute;
+    top: 21px;
+    left: -30px;
+        }
+        .porag2{
+            /* 8 3435 46-55-50 */
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+color: #252525;
+        }
+        .porag3{
+            margin-left: 50px;
+        }
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 32px 0;
+        .inputs {
+            text: {
+                align: end;
+                transform: uppercase;
+            }
+            
+            width: calc(520px * 100% / 1440px);
+            display: flex;
+            flex-wrap: wrap;
+            input[type="search"] {
+                width: 70%;
+                height: 35px;
+                border: 1px solid #e9e9ed;
+            }
+            input[type="button"] {
+                color: #fff;
+                width: 30%;
+                background: #3e7850;
+            }
+            .underinput{
+                padding-top:5px;
+                font-size: 10px;
+            }
+            a {
+                color: $secondaryColor;
+            }
+            @include xs {
+                width: 100%;
+            }
+        }
+        .contacts {
+            position: relative;
+            @include xs {
+                display: none;
+            }
+            
+        }
+        // @include xs{
+
+        // }
+    }
+    .burger-menu {
+        display: none;
+        @include xs {
+            display: flex;
+            flex-direction: row;
+            img {
+                width: 20px;
+            }
+            // gap: 24px;
+            width: 10%;
+            span {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 7px;
+                gap: 7px;
+                width: 60px;
+                height: 46px;
+                background-color: lightgrey;
+            }
+        }
+    }
+}
+
+// second section
+.wrapper {
+    main {
+    }
+}
+/**/
+.navbar{
+    height: 40px;
+    padding-top: 15px;
+    padding-left: 50px;
+
+    a{
+    text-decoration: none;
+    color: #000;
+    padding-left: 40px;
+    
+        
+    }
+    a:hover{
+        /* Главная */
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+/* identical to box height */
+
+color: #3E7850;   
+        } 
+
+        @media(max-width:450px) {
+            .nav-a{
+                display: block;
+            }
+            .container4{
+                display: block;
+            }
+            .left{
+                text-align: center;
+            }
+            body{
+                padding: 0;
+                margin: 0;
+            }
+            width: min-content;
+        }
+}
+.container1{
+    background-image:url("слайдер.jpg") ;
+    background-repeat: no-repeat;
+background-size: 100% 100%;
+height: 60vh;
+}
+/*container2*/
+.container2{
+    background-color: #F7F7F7;
+    .first-porag{
+/* Каталог продукции */
+text-align: center;
+padding-top: 50px;
+padding-bottom: 50px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 42px;
+
+color: #252525;
+    }
+
+    .second-porag{
+        padding: 20px;
+background-color: white;
+    }
+
+    .second-porag:hover{
+        color: #3E7850;  
+    }
+    
+   
+
+    .block{
+    width: 90%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: grid;
+    background-color: #fff;
+    align-items: end;
+    grid-gap: 20px;
+    margin: 20px 30px;
+    justify-content: center;
+}
+.block-in-block{
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+ 
+}
+/**/
+
+.container3{
+    display: flex;
+background-image: url("depo.jpg");
+height: 345px;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+filter: brightness(50%);
+.slider{
+    width: 15.99%;
+    text-align: center;
+    padding-top: 100px;
+    color: #ffffff;
+}
+}
+
+
+/**/
+.container4{
+    display: flex;
+       .left{
+    width: 49.99%;
+
+}
+      .poragraphs{
+margin-left: 150px;
+margin-top: 50px;
+}
+     .right{
+    width: 49.99%;
+    margin: 0;
+}
+
+.firstinput{
+margin-top: 50px;
+}
+.secondinput{
+    
+}
+.input1{
+    width: 50%;
+    height: 35px;
+    margin-bottom: 15px;
+}
+.input2{
+    width: 50%;
+    height: 35px;
+    margin-bottom: 15px;
+}
+.input3{
+   
+    top: 185px;
+        
+      
+  }
+  .chek-btm{
+    display: flex;
+  }
+  textarea{
+    width: 50%;
+    height: 100px;
+  }
+  .chec{
+
+
+  }
+  .porog{
+   
+  }
+  .buttom{
+    margin-top: 25px;
+    margin-left: 50px;
+}
+  }
+  .btm{
+    padding: 5px 10px;
+background-color: #3e7850;
+color: #fff;
+  }
+  
+
+  /**/
+  .footer{
+    display: flex;
+margin-top: 170px;
+border: 1px solid black;
+background-color: #555556;
+padding: 20px 30px;
+.block-left{
+    width: 25%;
+}
+.block-center{
+    width: 50%;
+    margin-top: 15px;
+    color: white;
+}
+.block-right{
+    width: 25%;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 30px;
+}
+.prava{
+    color: #fff;
+    padding-top: 10px;
+}
+
+}
+@media(max-width:375px) {
+    .block{
+        margin: 20px 30px;
+    }
+}
+
+@media(max-width:450px) {
+    .container4{
+        display: block;
+    .left{
+        display: block;
+    }
+    .right{
+        width: 99.99%;
+        display: block;
+        text-align: center;
+        margin: 0px;
+
+        .chek-btm{
+            display: block;
+            .buttom{
+                margin-top: 25px;
+                margin-left: 30px;
+            }
+        }
+    }
+}
+}
